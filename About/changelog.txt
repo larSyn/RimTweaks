@@ -1,0 +1,257 @@
+RimTweaks v1.0
+Changelog:
+
+Crafting:
+	-Crafting Stone Blocks now uses the Crafting skill, Skill Learn Factor increased
+	-Added bulk recipe for Stone Blocks
+	-Components and Advanced Components now stack to 75
+	-Component recipe reduced to 10 Steel, Work Amount reduced to 1000
+	-Advanced components Work Amount reduced to 2000
+	-Added bulk recipes for both Component types
+	-Smelting Slag now produces 25 Steel
+	-Added bulk Slag smelting recipe
+	-Made Glitterworld Medicine craftable
+	-Research for Glitterworld Medicine added
+	-Changed Vitals Monitor recipe to 150 Steel and 1 Component from 180 Steel
+	-Tool Cabinet recipe lowered to 100 Steel from 200 Steel
+
+Facilities:
+	-Tool Cabinet Work Speed buff raised to 10%
+	-Vitals Monitor recipe changed to 150 Steel and 1 Component
+	-Vitals Monitor Tend Quality raised to 10%
+	-Vitals Monitor Immunity Gain Speed raised to 5%
+	-Vitals Monitor Surgery Success raised to 20%
+	-Vitals Monitor no longer needs to be adjacent to bed - Max Distance of 4 tiles away
+	-End Table Max Simultaneous increased to 2 (because double beds exist)
+	-Dresser Max Simultaneous increased to 2 (because double beds exist)
+	-Dresser Max Distance increased to 10
+
+Storage
+	-Removed Default categories from the Shelf
+	-Made Dressers store Apparel
+
+Power
+	-Torch fuel consumption lowered to 1.1 (cut in half)
+	-Standing Lamp power consumption reduced to 15 from 75
+	-Sunlamp power consumption reduced to 1500 from 2900
+	-Vitals Monitor power consumption reduced to 75 from 150
+	-Multi-Analyzer power consumption reduced to 50 from 200
+	-Ground Penetrating Scanner power consumption reduced to 500 from 1500
+	-Heater power consumption reduced to 100 from 175
+	-Cooler power consumption reduced to 125 from 200
+
+Map Generation
+	-Increased river spawn chance
+	-Increased Steam Geyser spawn chance
+
+Traders
+	-Slightly increased Ally Visit chance
+	-Increased Orbital Trader chance
+
+Incidents
+	-Increased Raid chance
+	-Decreased Infestation chance
+	-Increased Manhunter Pack chance
+	-Increased Mass Animal Insanity chance
+	-Increased Single Animal Insanity chance
+
+Thoughts(Memory_Death):
+	-Guest Executed
+		-Duration down to 3 days
+		-Stack Limit down to 3
+		-Added Cannibal to Null Traits
+	-Colonist Executed
+		-Guilty Colonist executed Description changed
+		-Guilty Colonist executed Mood Effect raised to 5
+		-Colonist died from Organ Harvesting Mood Effect raised to -10
+		-Stack Limit down to 3
+		-Added Cannibal and Bloodlust to Null Traits
+	-Prisoner Died Innocent
+		-Duration down to 1 day
+		-Stack Limit down to 3
+		-Added Cannibal and Bloodlust to Null Traits
+		-Mood Effect down to -3
+	-Colonist Died
+		-Stack Limit down to 3
+		-Mood Effect raised to -5
+	-Bonded Animal Died
+		-Duration down to 8 days 
+	-Pawn With Good Opinion Died
+		-Duration down to 10 days 
+		-Stack Limit down to 3
+		-Added Bloodlust to Null Traits
+	-Pawn With Bad Opinion Died
+		-Duration down to 5 days 
+		-Stack Limit down to 3
+		-Added Kind to Null Traits
+
+Thoughts(Memory_Eating)
+	-Ate Awful Meal
+		-Mood Effect down to -3
+	-Ate Raw Food
+		-Mood Effect down to -5
+	-Ate Kibble
+		-Mood Effect down to -10
+	-Ate Corpse
+		-Mood Effect raised to -25
+		-Added Cannibal and Psychopath Null Traits
+	-Ate Humanlike Meat
+		-Mood Effect down to -20
+		-Added Psychopath to Null Traits
+	-Ate Humanlike Meat As Ingredient
+		-Mood Effect down to -15
+		-Added Psychopath to Null Traits
+
+Thoughts(Memory_Misc)
+	-Know Prisoner Sold
+		-Duration down to 1 days
+		-Stack Limit down to 3
+		-Stacked Effect Multiplier down to 0.5
+	-Guest/Prisoner Organ Harvested
+		-Duration down to 3 days
+		-Stack Limit down to 3
+		-Stacked Effect Multiplier down to 0.5
+		-Mood Effect down to -3
+		-Added Cannibal and Bloodlust to Null Traits
+	-Colonist Organ Harvested
+		-Duration down to 3 days
+		-Stack Limit down to 3
+		-Stacked Effect Multiplier down to 0.5
+		-Added Cannibal and Bloodlust to Null Traits
+	-My Organ Harvested
+		-Mood Effect down to -20
+	-Butchered Human
+		-Duration down to 3 days
+		-Stack Limit down to 3
+		-Mood Effect raised to -15
+	-Know Human Butchered
+		-Duration down to 3 days
+		-Stack Limit down to 3
+		-Mood Effect raised to -10
+	-Observed Rotting Corpse
+		-Stack Limit down to 3
+		-Added Cannibal and Psychopath to Null Traits
+	-Witness Ally Death
+		-Duration down to 3 days
+		-Stack Limit down to 3
+	-Witness Non-Ally Death
+		-Duration down to 3 days
+		-Stack Limit down to 3
+	-Witnessed Death Family
+		-Added Stacked Effect Multiplier - 1.25
+		-Duration raised to 7 days
+		-Stack Limit raised to 3
+		-Mood Effect raised to -15
+	-Failed To Rescue Relative
+		-Duration down to 7 days
+		-Stack Limit raised to 3
+		-Mood Effect raised to -10
+	-Rescued Relative
+		-Duration down to 7 days
+		-Stack Limit raised to 3
+
+Thoughts(Memory_RoomStats)
+	-Ate in Dining Room
+		-Added "Gross" Dining Room
+			-Mood Effect of -4
+		-Added "Awful" Dining Room
+			-Mood Effect of -2
+		-Added "Mediocre" Dining Room 
+			-Mood Effect of 0
+		-"Very Impressive" Dining Room Mood Effect raised to 6
+		-"Extremely Impressive" Dining Room Mood Effect raised to 8
+		-"Unbelievably Impressive" Dining Room Mood Effect raised to 10
+		-"Wondrously Impressive" Dining Room Mood Effect raised to 12
+	-Joy Activity in Rec Room
+		-Added "Awful" Rec Room
+			-Mood Effect of -4
+		-Added "Dull" Rec Room
+			-Mood Effect of -2
+		-Added "Mediocre" Rec Room 
+			-Mood Effect of 0
+		-"Very Impressive" Rec Room Mood Effect raised to 6
+		-"Extremely Impressive" Rec Room Mood Effect raised to 8
+		-"Unbelievably Impressive" Rec Room Mood Effect raised to 10
+		-"Wondrously Impressive" Rec Room Mood Effect raised to 12
+	-Slept in Bedroom
+		-"Very Impressive" Bedroom Mood Effect raised to 6
+		-"Extremely Impressive" Bedroom Mood Effect raised to 8
+		-"Unbelievably Impressive" Bedroom Effect raised to 10
+		-"Wondrously Impressive" Bedroom Mood Effect raised to 12
+	-Slept in Barracks
+		-"Awful" Barrack Mood Effect raised to -10
+		-"Dull" Barrack Mood Effect down to -5
+		-"Mediocre" Barrack Effect down to -3
+		-"Decent" Barrack Mood Effect raised to -1
+		-"Slightly Impressive" Barrack Effect raised to 0
+		-"Impressive" Barrack Effect raised to 1
+		-"Very Impressive" Barrack Effect raised to 2
+		-"Extremely Impressive" Barrack Mood Effect raised to 3
+		-"Unbelievably Impressive" Barrack Effect raised to 4
+		-"Wondrously Impressive" Barrack Mood Effect raised to 5
+
+Thoughts(Mem_Social)
+	-Insulted Me
+		-Duration down to 10 days
+	-Harmed Me
+		-Duration raised to 20 days
+	-Botched My Surgery
+		-Duration down to 30 days
+		-Stack Limit down to 3
+		-Stack Effect Multiplier down to 0.5
+	-Rebuffed My Romance Attempt
+		-Duration down to 1 day
+		-Stack Limit per Pawn down to 3
+	-Failed Romance Attempt on Me
+		-Duration down to 2 days
+		-Stack Limit per Pawn down to 3
+	-Failed Romance Attempt on Me Low Opinion
+		-Duration raised to 5 days
+		-Stack Limit down to 1
+		-Mood Effect down to -5
+
+Thoughts(Sit_General)
+	-Dead Man's Apparel
+		-2 Pieces - Mood Effect raised to -6
+		-3 Pieces - Mood Effect raised to -9
+		-4 Pieces - Mood Effect raised to -12
+		-Added Cannibal and Psychopath to Null Traits
+	-Human Leather Apparel Sad
+		-1 Piece - Mood Effect raised to -5
+		-2 Pieces - Mood Effect raised to -7
+		-3 Pieces - Mood Effect raised to -10
+		-4 Pieces - Mood Effect raised to -15
+	-Human Leather Apparel Happy
+		-1 Piece - Mood Effect raised to 5
+		-2 Pieces - Mood Effect raised to 7
+		-3 Pieces - Mood Effect raised to 10
+		-4 Pieces - Mood Effect raised to 15
+	-Environment Hot
+		-"Very Hot" - Mood Effect down to -8
+		-"Extremely Hot" - Mood Effect down to -10
+		-"Burning Hot" - Mood Effect down to -15
+
+Thoughts(Sit_RoomStats)
+	-Hospital Patient
+		-"Slightly Impressive" Hospital Mood Effect raised to 4
+		-"Very Impressive" Hospital Mood Effect raised to 6
+		-"Extremely Impressive" Hospital Mood Effect raised to 8
+		-"Unbelievably Impressive" Hospital Effect raised to 10
+		-"Wondrously Impressive" Hospital Mood Effect raised to 12
+
+Thoughts(Sit_Social)
+	-Ugly trait
+		-Added "Kind" to Null Traits
+	-Annoying Voice
+		-Added "Kind" to Null Traits
+		-Opinion Offset down to -15
+	-Sold Prisoner
+		-Opinion Offset down to -5
+
+Thoughts(SitTraits)
+	-Pyro Happy
+		-Mood Effect raised to 10
+	-Clothed Nudist
+		-Mood Effect down to -10
+	-Night Owl at Night
+		-Mood Effect raised 20

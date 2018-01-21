@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--==========  RimTweaks - Traders  ==========-->
+  
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success> 
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Storytellers.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/StorytellerDef[defName = "Cassandra"]/comps/li[@Class="StorytellerCompProperties_AllyInteraction"]/minDaysPassed</xpath>
+				<value>
+					<minDaysPassed>4</minDaysPassed>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/StorytellerDef[defName = "Cassandra"]/comps/li[@Class="StorytellerCompProperties_AllyInteraction"]/baseMtb</xpath>
+				<value>
+					<baseMtb>5</baseMtb>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/StorytellerDef[defName = "Cassandra"]/comps/li[@Class="StorytellerCompProperties_SingleMTB"]/mtbDays</xpath>
+				<value>
+					<mtbDays>9</mtbDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/StorytellerDef[defName = "Phoebe"]/comps/li[@Class="StorytellerCompProperties_AllyInteraction"]/minDaysPassed</xpath>
+				<value>
+					<minDaysPassed>4</minDaysPassed>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/StorytellerDef[defName = "Phoebe"]/comps/li[@Class="StorytellerCompProperties_AllyInteraction"]/baseMtb</xpath>
+				<value>
+					<baseMtb>5</baseMtb>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/StorytellerDef[defName = "Phoebe"]/comps/li[@Class="StorytellerCompProperties_SingleMTB"]/mtbDays</xpath>
+				<value>
+					<mtbDays>9</mtbDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/StorytellerDef[defName = "Randy"]/comps/li[@Class="StorytellerCompProperties_AllyInteraction"]/minDaysPassed</xpath>
+				<value>
+					<minDaysPassed>4</minDaysPassed>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/StorytellerDef[defName = "Randy"]/comps/li[@Class="StorytellerCompProperties_AllyInteraction"]/baseMtb</xpath>
+				<value>
+					<baseMtb>5</baseMtb>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/StorytellerDef[defName = "Randy"]/comps/li[@Class="StorytellerCompProperties_SingleMTB"]/mtbDays</xpath>
+				<value>
+					<mtbDays>9</mtbDays>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

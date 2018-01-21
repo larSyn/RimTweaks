@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--==========  RimTweaks - Thoughts  ==========-->
+  
+  <!--==========  Situation General  ==========-->
+  
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Thoughts_Situation_General.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "DeadMansApparel"]/stages/li[2]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-6</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "DeadMansApparel"]/stages/li[3]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-9</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "DeadMansApparel"]/stages/li[4]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-12</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "DeadMansApparel"]/nullifyingTraits</xpath>
+				<value>
+					<li>Cannibal</li>
+					<li>Psychopath</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "HumanLeatherApparelSad"]/stages/li[1]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-5</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "HumanLeatherApparelSad"]/stages/li[2]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-7</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "HumanLeatherApparelSad"]/stages/li[3]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-10</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "HumanLeatherApparelSad"]/stages/li[4]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-15</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "HumanLeatherApparelHappy"]/stages/li[1]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>5</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "HumanLeatherApparelHappy"]/stages/li[2]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>7</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "HumanLeatherApparelHappy"]/stages/li[3]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>10</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "HumanLeatherApparelHappy"]/stages/li[4]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>15</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "EnvironmentHot"]/stages/li[2]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-8</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "EnvironmentHot"]/stages/li[3]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-10</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "EnvironmentHot"]/stages/li[4]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-15</baseMoodEffect>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

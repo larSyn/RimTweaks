@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--==========  RimTweaks - Thoughts  ==========-->
+  
+  <!--==========  Situation Traits  ==========-->
+	
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+	    <operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Thoughts_Situation_Traits.xml</file>
+            </li>
+		    <li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "PyromaniacHappy"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>10</baseMoodEffect>
+				</value>
+			</li>
+		    <li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "ClothedNudist"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-10</baseMoodEffect>
+				</value>
+			</li>
+		    <li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "NightOwlDuringTheNight"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>20</baseMoodEffect>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+</Patch>
+  
+	

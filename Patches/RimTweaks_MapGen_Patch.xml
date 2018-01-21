@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--==========  RimTweaks - Map Gen  ==========-->
+
+  <!--==========  Rivers  ==========-->   
+
+  	<Operation Class="PatchOperationSequence">
+	    <success>Always</success> 
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>River_Defs.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RiverDef[defName = "HugeRiver"]/spawnChance</xpath>
+				<value>
+					<spawnChance>1.5</spawnChance>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RiverDef[defName = "LargeRiver"]/spawnChance</xpath>
+				<value>
+					<spawnChance>1.0</spawnChance>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RiverDef[defName = "River"]/spawnChance</xpath>
+				<value>
+					<spawnChance>0.5</spawnChance>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RiverDef[defName = "Creek"]</xpath>
+				<value>
+					<spawnChance>0.25</spawnChance>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+  <!--==========  Geysers  ==========--> 
+
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success> 
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>BasicMapGenerator.xml</file>
+            </li>
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/GenStepDef[defName = "SteamGeysers"]/countPer10kCellsRange</xpath>
+				<value>
+					<countPer10kCellsRange>
+				        <min>1</min>
+				        <max>2</max>
+				    </countPer10kCellsRange>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

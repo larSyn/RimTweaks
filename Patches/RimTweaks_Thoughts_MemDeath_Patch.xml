@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--==========  RimTweaks - Thoughts  ==========-->
+  
+  <!--==========  Memory Death  ==========-->
+  
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Thoughts_Memory_Death.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowGuestExecuted"]/durationDays</xpath>
+				<value>
+					<durationDays>3</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "KnowGuestExecuted"]/nullifyingTraits</xpath>
+				<value>
+					<li>Cannibal</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "KnowGuestExecuted"]</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowColonistExecuted"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "KnowColonistExecuted"]/nullifyingTraits</xpath>
+				<value>
+					<li>Cannibal</li>
+					<li>Bloodlust</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowColonistExecuted"]/stages/li[1]/description</xpath>
+				<value>
+					<description>A guilty colonist was executed. It was justified. We won't be sorry to see them gone.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowColonistExecuted"]/stages/li[1]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>5</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowColonistExecuted"]/stages/li[4]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-10</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowPrisonerDiedInnocent"]/durationDays</xpath>
+				<value>
+					<durationDays>1</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowPrisonerDiedInnocent"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "KnowPrisonerDiedInnocent"]/nullifyingTraits</xpath>
+				<value>
+					<li>Cannibal</li>
+					<li>Bloodlust</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowPrisonerDiedInnocent"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-3</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowColonistDied"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowColonistDied"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-5</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "BondedAnimalDied"]/durationDays</xpath>
+				<value>
+					<durationDays>8</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "PawnWithGoodOpinionDied"]/durationDays</xpath>
+				<value>
+					<durationDays>10</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "PawnWithGoodOpinionDied"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "PawnWithGoodOpinionDied"]/nullifyingTraits</xpath>
+				<value>
+					<li>Bloodlust</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "PawnWithBadOpinionDied"]/durationDays</xpath>
+				<value>
+					<durationDays>5</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "PawnWithBadOpinionDied"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "PawnWithBadOpinionDied"]/nullifyingTraits</xpath>
+				<value>
+					<li>Kind</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

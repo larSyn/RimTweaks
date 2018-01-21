@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--==========  RimTweaks - Thoughts  ==========-->
+  
+  <!--==========  Memory Misc  ==========-->
+  
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Thoughts_Memory_Misc.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowPrisonerSold"]/durationDays</xpath>
+				<value>
+					<durationDays>1</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowPrisonerSold"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "KnowPrisonerSold"]</xpath>
+				<value>
+					<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowGuestOrganHarvested"]/durationDays</xpath>
+				<value>
+					<durationDays>3</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowGuestOrganHarvested"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowGuestOrganHarvested"]/stackedEffectMultiplier</xpath>
+				<value>
+					<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowGuestOrganHarvested"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-3</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "KnowGuestOrganHarvested"]/nullifyingTraits</xpath>
+				<value>
+					<li>Bloodlust</li>
+					<li>Cannibal</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowColonistOrganHarvested"]/durationDays</xpath>
+				<value>
+					<durationDays>3</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowColonistOrganHarvested"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowColonistOrganHarvested"]/stackedEffectMultiplier</xpath>
+				<value>
+					<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "KnowColonistOrganHarvested"]/nullifyingTraits</xpath>
+				<value>
+					<li>Bloodlust</li>
+					<li>Cannibal</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "MyOrganHarvested"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-20</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "ButcheredHumanlikeCorpse"]/durationDays</xpath>
+				<value>
+					<durationDays>3</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "ButcheredHumanlikeCorpse"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "ButcheredHumanlikeCorpse"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-15</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowButcheredHumanlikeCorpse"]/durationDays</xpath>
+				<value>
+					<durationDays>3</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowButcheredHumanlikeCorpse"]/stackLimit</xpath>
+				<value>
+					<stackLimit>2</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "KnowButcheredHumanlikeCorpse"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-10</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "ObservedLayingRottingCorpse"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "ObservedLayingRottingCorpse"]/nullifyingTraits</xpath>
+				<value>
+					<li>Psychopath</li>
+					<li>Cannibal</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "WitnessedDeathAlly"]/durationDays</xpath>
+				<value>
+					<durationDays>3</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "WitnessedDeathAlly"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "WitnessedDeathNonAlly"]/durationDays</xpath>
+				<value>
+					<durationDays>3</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "WitnessedDeathNonAlly"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "WitnessedDeathFamily"]</xpath>
+				<value>
+					<stackedEffectMultiplier>1.25</stackedEffectMultiplier>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "WitnessedDeathFamily"]/durationDays</xpath>
+				<value>
+					<durationDays>7</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "WitnessedDeathFamily"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "WitnessedDeathFamily"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-15</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "FailedToRescueRelative"]/durationDays</xpath>
+				<value>
+					<durationDays>7</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "FailedToRescueRelative"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "FailedToRescueRelative"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-10</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "RescuedRelative"]/durationDays</xpath>
+				<value>
+					<durationDays>7</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "RescuedRelative"]/stackLimit</xpath>
+				<value>
+					<stackLimit>3</stackLimit>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

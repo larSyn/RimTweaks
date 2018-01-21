@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--==========  RimTweaks - Thoughts  ==========-->
+  
+  <!--==========  Memory Room Stats  ==========-->
+  
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Thoughts_Memory_RoomStats.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AteInImpressiveDiningRoom"]/stages/li[1]</xpath>
+				<value>
+					<li>
+						<label>gross dining room</label>
+						<description>I ate my meal in the nastiest dining room I have ever seen.</description>
+						<baseMoodEffect>-4</baseMoodEffect>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AteInImpressiveDiningRoom"]/stages/li[2]</xpath>
+				<value>
+					<li>
+						<label>awful dining room</label>
+						<description>I ate my meal in a dining room.  It was awful.</description>
+						<baseMoodEffect>-2</baseMoodEffect>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AteInImpressiveDiningRoom"]/stages/li[3]</xpath>
+				<value>
+					<li>
+						<label>mediocre dining room</label>
+						<description>I ate my meal in a dining room.  It was ok.</description>
+						<baseMoodEffect>0</baseMoodEffect>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AteInImpressiveDiningRoom"]/stages/li[7]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>6</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AteInImpressiveDiningRoom"]/stages/li[8]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>8</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AteInImpressiveDiningRoom"]/stages/li[9]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>10</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AteInImpressiveDiningRoom"]/stages/li[10]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>12</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "JoyActivityInImpressiveRecRoom"]/stages/li[1]</xpath>
+				<value>
+					<li>
+						<label>awful rec room</label>
+						<description>This rec room is pathetic...there's nothing to do.</description>
+						<baseMoodEffect>-4</baseMoodEffect>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "JoyActivityInImpressiveRecRoom"]/stages/li[2]</xpath>
+				<value>
+					<li>
+						<label>dull rec room</label>
+						<description>I didn't have much fun in the rec room.</description>
+						<baseMoodEffect>-2</baseMoodEffect>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "JoyActivityInImpressiveRecRoom"]/stages/li[3]</xpath>
+				<value>
+					<li>
+						<label>rec room</label>
+						<description>I had an ok time in the rec room.</description>
+						<baseMoodEffect>0</baseMoodEffect>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "JoyActivityInImpressiveRecRoom"]/stages/li[7]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>6</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "JoyActivityInImpressiveRecRoom"]/stages/li[8]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>8</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "JoyActivityInImpressiveRecRoom"]/stages/li[9]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>10</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "JoyActivityInImpressiveRecRoom"]/stages/li[10]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>12</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBedroom"]/stages/li[7]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>6</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBedroom"]/stages/li[8]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>8</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBedroom"]/stages/li[9]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>10</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBedroom"]/stages/li[10]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>12</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBarracks"]/stages/li[1]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-10</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBarracks"]/stages/li[2]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-5</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBarracks"]/stages/li[3]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-3</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBarracks"]/stages/li[4]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-1</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBarracks"]/stages/li[5]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>0</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBarracks"]/stages/li[6]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>1</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBarracks"]/stages/li[7]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>2</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBarracks"]/stages/li[8]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>3</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBarracks"]/stages/li[9]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>4</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SleptInBarracks"]/stages/li[10]/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>5</baseMoodEffect>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--==========  RimTweaks - Thoughts  ==========-->
+  
+  <!--==========  Memory Social  ==========-->
+  
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Thoughts_Memory_Social.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "Insulted"]/durationDays</xpath>
+				<value>
+					<durationDays>10</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "HarmedMe"]/durationDays</xpath>
+				<value>
+					<durationDays>20</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "BotchedMySurgery"]/durationDays</xpath>
+				<value>
+					<durationDays>30</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "BotchedMySurgery"]/stackLimitPerPawn</xpath>
+				<value>
+					<stackLimitPerPawn>3</stackLimitPerPawn>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "BotchedMySurgery"]/stackedEffectMultiplier</xpath>
+				<value>
+					<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "RebuffedMyRomanceAttempt"]/durationDays</xpath>
+				<value>
+					<durationDays>5</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "RebuffedMyRomanceAttempt"]/stackLimitPerPawn</xpath>
+				<value>
+					<stackLimitPerPawn>3</stackLimitPerPawn>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "FailedRomanceAttemptOnMe"]/durationDays</xpath>
+				<value>
+					<durationDays>2</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "FailedRomanceAttemptOnMe"]/stackLimitPerPawn</xpath>
+				<value>
+					<stackLimitPerPawn>3</stackLimitPerPawn>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "FailedRomanceAttemptOnMeLowOpinionMood"]/durationDays</xpath>
+				<value>
+					<durationDays>5.0</durationDays>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "FailedRomanceAttemptOnMeLowOpinionMood"]/stackLimit</xpath>
+				<value>
+					<stackLimit>1</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "FailedRomanceAttemptOnMeLowOpinionMood"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-10</baseMoodEffect>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

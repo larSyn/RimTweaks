@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--==========  RimTweaks - Thoughts  ==========-->
+  
+  <!--==========  Memory Eating  ==========-->
+  
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Thoughts_Memory_Eating.xml</file>
+            </li>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Thoughts_Memory_Eating.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AteAwfulMeal"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-3</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AteRawFood"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-5</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AteKibble"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-8</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AteCorpse"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-25</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "AteCorpse"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>Cannibal</li>
+						<li>Psychopath</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AteHumanlikeMeatDirect"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-20</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "AteHumanlikeMeatDirect"]/nullifyingTraits</xpath>
+				<value>
+					<li>Psychopath</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AteHumanlikeMeatAsIngredient"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>-15</baseMoodEffect>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "AteHumanlikeMeatAsIngredient"]/nullifyingTraits</xpath>
+				<value>
+					<li>Psychopath</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

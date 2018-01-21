@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--==========  RimTweaks - Crafting  ==========-->
+  
+  <!--========== Stone Blocks  ==========-->
+  
+  <Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Recipes_Production.xml</file>
+            </li>
+			<li Class="PatchOperationInsert">
+				<xpath>Defs/RecipeDef[@Name = "MakeStoneBlocksBase"]/recipeUsers</xpath>
+				<value>
+					<workSkill>Crafting</workSkill>
+					<workSkillLearnFactor>1.75</workSkillLearnFactor>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					<RecipeDef ParentName="MakeStoneBlocksBase">
+						<defName>MakeStoneBlocksAnyBulk</defName>
+						<label>make any stone blocks (bulk)</label>
+						<description>Cuts rock chunks into usable stone blocks in larger quantities.</description>
+						<jobString>Cutting stone blocks from chunks in bulk.</jobString>
+						<workAmount>3200</workAmount>
+						<workSpeedStat>SmithingSpeed</workSpeedStat>
+						<effectWorking>CutStone</effectWorking>
+						<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+						<ingredients>
+						  	<li>
+								<filter>
+									<categories>
+										<li>StoneChunks</li>
+									</categories>
+								</filter>
+								<count>3</count>
+						  	</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<categories>
+								<li>StoneChunks</li>
+							</categories>
+						</fixedIngredientFilter>
+						<specialProducts>
+							<li>Butchery</li>
+						</specialProducts>
+					</RecipeDef>
+				</value>
+			</li>
+            <li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					<RecipeDef ParentName="MakeStoneBlocksBase">
+						<defName>MakeStoneBlocksSandstoneBulk</defName>
+						<label>make sandstone blocks (bulk)</label>
+						<description>Cuts sandstone chunks into usable stone blocks in larger quantities.</description>
+						<jobString>Cutting stone blocks from chunks in bulk.</jobString>
+						<workAmount>3200</workAmount>
+						<workSpeedStat>SmithingSpeed</workSpeedStat>
+						<effectWorking>CutStone</effectWorking>
+						<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+						<ingredients>
+						  <li>
+							<filter>
+							  <thingDefs>
+								<li>ChunkSandstone</li>
+							  </thingDefs>
+							</filter>
+							<count>3</count>
+						  </li>
+						</ingredients>
+						<products>
+						  <BlocksSandstone>60</BlocksSandstone>
+						</products>
+						<fixedIngredientFilter>
+						  <thingDefs>
+							<li>ChunkSandstone</li>
+						  </thingDefs>
+						</fixedIngredientFilter>
+		     		    <researchPrerequisite>Stonecutting</researchPrerequisite>
+					</RecipeDef>
+				</value>
+			</li>
+            <li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					<RecipeDef ParentName="MakeStoneBlocksBase">
+						<defName>MakeStoneBlocksGraniteBulk</defName>
+						<label>make granite blocks (bulk)</label>
+						<description>Cuts granite chunks into usable stone blocks in larger quantities.</description>
+						<jobString>Cutting stone blocks from chunks in bulk.</jobString>
+						<workAmount>3200</workAmount>
+						<workSpeedStat>SmithingSpeed</workSpeedStat>
+						<effectWorking>CutStone</effectWorking>
+						<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+						<ingredients>
+						  <li>
+							<filter>
+							  <thingDefs>
+								<li>ChunkGranite</li>
+							  </thingDefs>
+							</filter>
+							<count>3</count>
+						  </li>
+						</ingredients>
+						<products>
+						  <BlocksGranite>60</BlocksGranite>
+						</products>
+						<fixedIngredientFilter>
+						  <thingDefs>
+							<li>ChunkGranite</li>
+						  </thingDefs>
+						</fixedIngredientFilter>
+		     		    <researchPrerequisite>Stonecutting</researchPrerequisite>
+					</RecipeDef>
+				</value>
+			</li>
+            <li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					<RecipeDef ParentName="MakeStoneBlocksBase">
+						<defName>MakeStoneBlocksLimestoneBulk</defName>
+						<label>make limestone blocks (bulk)</label>
+						<description>Cuts limestone chunks into usable stone blocks in larger quantities.</description>
+						<jobString>Cutting stone blocks from chunks in bulk.</jobString>
+						<workAmount>3200</workAmount>
+						<workSpeedStat>SmithingSpeed</workSpeedStat>
+						<effectWorking>CutStone</effectWorking>
+						<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+						<ingredients>
+						  <li>
+							<filter>
+							  <thingDefs>
+								<li>ChunkLimestone</li>
+							  </thingDefs>
+							</filter>
+							<count>3</count>
+						  </li>
+						</ingredients>
+						<products>
+						  <BlocksLimestone>60</BlocksLimestone>
+						</products>
+						<fixedIngredientFilter>
+						  <thingDefs>
+							<li>ChunkLimestone</li>
+						  </thingDefs>
+						</fixedIngredientFilter>
+		     		    <researchPrerequisite>Stonecutting</researchPrerequisite>
+					</RecipeDef>
+				</value>
+			</li>
+            <li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					<RecipeDef ParentName="MakeStoneBlocksBase">
+						<defName>MakeStoneBlocksSlateBulk</defName>
+						<label>make slate blocks (bulk)</label>
+						<description>Cuts slate chunks into usable stone blocks in larger quantities.</description>
+						<jobString>Cutting stone blocks from chunks in bulk.</jobString>
+						<workAmount>3200</workAmount>
+						<workSpeedStat>SmithingSpeed</workSpeedStat>
+						<effectWorking>CutStone</effectWorking>
+						<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+						<ingredients>
+						  <li>
+							<filter>
+							  <thingDefs>
+								<li>ChunkSlate</li>
+							  </thingDefs>
+							</filter>
+							<count>3</count>
+						  </li>
+						</ingredients>
+						<products>
+						  <BlocksSlate>60</BlocksSlate>
+						</products>
+						<fixedIngredientFilter>
+						  <thingDefs>
+							<li>ChunkSlate</li>
+						  </thingDefs>
+						</fixedIngredientFilter>
+		     		    <researchPrerequisite>Stonecutting</researchPrerequisite>
+					</RecipeDef>
+				</value>
+			</li>
+            <li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					<RecipeDef ParentName="MakeStoneBlocksBase">
+						<defName>MakeStoneBlocksMarbleBulk</defName>
+						<label>make marble blocks (bulk)</label>
+						<description>Cuts marble chunks into usable stone blocks in larger quantities.</description>
+						<jobString>Cutting stone blocks from chunks in bulk.</jobString>
+						<workAmount>3200</workAmount>
+						<workSpeedStat>SmithingSpeed</workSpeedStat>
+						<effectWorking>CutStone</effectWorking>
+						<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+						<ingredients>
+						  <li>
+							<filter>
+							  <thingDefs>
+								<li>ChunkMarble</li>
+							  </thingDefs>
+							</filter>
+							<count>3</count>
+						  </li>
+						</ingredients>
+						<products>
+						  <BlocksMarble>60</BlocksMarble>
+						</products>
+						<fixedIngredientFilter>
+						  <thingDefs>
+							<li>ChunkMarble</li>
+						  </thingDefs>
+						</fixedIngredientFilter>
+		     		    <researchPrerequisite>Stonecutting</researchPrerequisite>
+					</RecipeDef>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+  
+  <!--========== Components  ==========-->
+	
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Items_Resource_Manufactured.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName = "Component"]/stackLimit</xpath>
+				<value>
+					<stackLimit>75</stackLimit>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName = "AdvancedComponent"]/stackLimit</xpath>
+				<value>
+					<stackLimit>75</stackLimit>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+  
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Recipes_Production.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "MakeComponent"]/ingredients/li/count</xpath>
+					<value>
+						<count>10</count>
+					</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "MakeComponent"]/workAmount</xpath>
+					<value>
+						<workAmount>1000</workAmount>
+					</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "MakeAdvancedComponent"]/workAmount</xpath>
+				<value>
+					<workAmount>2000</workAmount>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					<RecipeDef>
+						<defName>MakeBulkComponent</defName>
+						<label>make component (x10)</label>
+						<description>Make ten components.</description>
+						<jobString>Making components.</jobString>
+						<workSpeedStat>SmithingSpeed</workSpeedStat>
+						<effectWorking>Cook</effectWorking>
+						<soundWorking>Recipe_Machining</soundWorking>
+						<workAmount>7500</workAmount>
+						<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>Steel</li>
+									</thingDefs>
+								</filter>
+								<count>100</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>Steel</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+						<products>
+							<Component>10</Component>
+						</products>
+						<skillRequirements>
+							<Crafting>8</Crafting>
+						</skillRequirements>
+						<workSkill>Crafting</workSkill>
+						<recipeUsers>
+							<li>ComponentAssemblyBench</li>
+						</recipeUsers>
+					</RecipeDef>
+				</value>
+			</li>
+            <li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					<RecipeDef>
+						<defName>MakeBulkAdvancedComponent</defName>
+						<label>make advanced component (x10)</label>
+						<description>Make ten advanced components.</description>
+						<jobString>Making advanced components.</jobString>
+						<workSpeedStat>SmithingSpeed</workSpeedStat>
+						<effectWorking>Cook</effectWorking>
+						<soundWorking>Recipe_Machining</soundWorking>
+						<workAmount>10000</workAmount>
+						<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+						<ingredients>
+							<li>
+								<filter>
+								  <thingDefs>
+									<li>Component</li>
+								  </thingDefs>
+								</filter>
+								<count>10</count>
+							</li>
+							<li>
+								<filter>
+								  <thingDefs>
+									<li>Steel</li>
+								  </thingDefs>
+								</filter>
+								<count>100</count>
+							</li>
+							<li>
+								<filter>
+								  <thingDefs>
+									<li>Gold</li>
+								  </thingDefs>
+								</filter>
+								<count>3</count>
+							</li>
+							<li>
+								<filter>
+								  <thingDefs>
+									<li>Uranium</li>
+								  </thingDefs>
+								</filter>
+								<count>3</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>Steel</li>
+								<li>Component</li>
+								<li>Gold</li>
+								<li>Uranium</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+						<products>
+							<AdvancedComponent>10</AdvancedComponent>
+						</products>
+						<skillRequirements>
+							<Crafting>8</Crafting>
+						</skillRequirements>
+						<workSkill>Crafting</workSkill>
+						<recipeUsers>
+							<li>ComponentAssemblyBench</li>
+						</recipeUsers>
+					</RecipeDef>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+  <!--==========  Slag  ==========-->
+  
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Recipes_Production.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "ExtractMetalFromSlag"]/products</xpath>
+					<value>
+						<products>
+							<Steel>25</Steel>
+						</products>
+					</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName = "ExtractMetalFromSlag"]/workAmount</xpath>
+					<value>
+						<workAmount>1000</workAmount>
+					</value>
+			</li>
+		</operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					<RecipeDef>
+						<defName>ExtractBulkMetalFromSlag</defName>
+						<label>smelt metal from slag (bulk)</label>
+						<description>Use heat and strong electromagnets to separate useful metal from slag chunks.</description>
+						<jobString>Smelting bulk metal from slag.</jobString>
+						<workAmount>2500</workAmount>
+						<workSpeedStat>SmeltingSpeed</workSpeedStat>
+						<effectWorking>Smelt</effectWorking>
+						<soundWorking>Recipe_Smelt</soundWorking>
+						<ingredients>
+						  <li>
+							<filter>
+							  <thingDefs>
+								<li>ChunkSlagSteel</li>
+							  </thingDefs>
+							</filter>
+							<count>3</count>
+						  </li>
+						</ingredients>
+						<products>
+						  <Steel>75</Steel>
+						</products>
+						<fixedIngredientFilter>
+						  <thingDefs>
+							<li>ChunkSlagSteel</li>
+						  </thingDefs>
+						</fixedIngredientFilter>
+						<recipeUsers>
+							<li>ElectricSmelter</li>
+						</recipeUsers>
+		     		    <researchPrerequisite>ElectricSmelting</researchPrerequisite>
+					</RecipeDef>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+  <!--==========  Glitterworld Medicine  ==========-->
+	
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Items_Resource_Manufactured.xml</file>
+            </li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName = "GlitterworldMedicine"]/statBases</xpath>
+				<value>
+        			<WorkToMake>1000</WorkToMake>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName = "GlitterworldMedicine"]</xpath>
+				<value>
+			    	<costList>
+			     		<Medicine>1</Medicine>
+			        	<Ambrosia>6</Ambrosia>
+			        	<Penoxycyline>3</Penoxycyline>
+			    	</costList>
+					<recipeMaker>
+				     	<workSpeedStat>DrugProductionSpeed</workSpeedStat>
+				        <workSkill>Intellectual</workSkill>
+				    	<recipeUsers>
+				     	    <li>DrugLab</li>
+				     	</recipeUsers>
+				     	<researchPrerequisite>GlitterWorldMedicineProduction</researchPrerequisite>
+				        <skillRequirements>
+							<Medicine>15</Medicine>
+							<Crafting>9</Crafting>
+				   	    </skillRequirements>
+				    </recipeMaker>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName = "GlitterworldMedicine"]/techLevel</xpath>
+				<value>
+			    	<techLevel>Spacer</techLevel>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>ResearchProjects_Tier4_Misc.xml</file>
+            </li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					<ResearchProjectDef>
+						<defName>GlitterWorldMedicineProduction</defName>
+						<label>Glitterworld medicine production</label>
+						<description>Produce Glitterworld medicine from medicine, penoxycyline, and hyperweave.</description>
+						<baseCost>2000</baseCost>
+						<techLevel>Spacer</techLevel>
+						<prerequisites>
+							<li>MedicineProduction</li>
+							<li>MultiAnalyzer</li>
+						</prerequisites>
+						<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+						<requiredResearchFacilities>
+							<li>MultiAnalyzer</li>
+						</requiredResearchFacilities>
+						<researchViewX>10</researchViewX>
+						<researchViewY>1.5</researchViewY>
+						</ResearchProjectDef>
+					</value>
+			</li>
+		</operations>
+	</Operation>
+			
+ </Patch>

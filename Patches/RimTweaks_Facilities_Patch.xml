@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--==========  RimTweaks - Facilities  ==========-->
+
+  <!--==========  Tool Cabinet/Vitals Monitor  ==========-->
+	
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Buildings_Misc.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName = "ToolCabinet"]/costList</xpath>
+				<value>
+					<costList>
+						<Steel>100</Steel>
+					</costList>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName = "ToolCabinet"]/comps/li[@Class="CompProperties_Facility"]/statOffsets/WorkTableWorkSpeedFactor</xpath>
+				<value>
+					<WorkTableWorkSpeedFactor>0.1</WorkTableWorkSpeedFactor>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName = "VitalsMonitor"]/costList</xpath>
+				<value>
+					<costList>
+						<Steel>150</Steel>
+						<Component>1</Component>
+					</costList>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName = "VitalsMonitor"]/comps/li[@Class="CompProperties_Facility"]/statOffsets</xpath>
+				<value>
+					<statOffsets>
+						<MedicalTendQualityOffset>0.1</MedicalTendQualityOffset>
+						<ImmunityGainSpeedFactor>0.05</ImmunityGainSpeedFactor>
+						<SurgerySuccessChanceFactor>0.20</SurgerySuccessChanceFactor>
+					</statOffsets>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName = "VitalsMonitor"]/comps/li[@Class="CompProperties_Facility"]/mustBePlacedAdjacent</xpath>
+				<value>
+					<maxDistance>4</maxDistance>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+  <!--==========  End Table/Dresser  ==========-->
+	
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+		<operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Buildings_Furniture.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName = "EndTable"]/comps/li[@Class="CompProperties_Facility"]/maxSimultaneous</xpath>
+				<value>
+					<maxSimultaneous>2</maxSimultaneous>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName = "Dresser"]/comps/li[@Class="CompProperties_Facility"]/maxSimultaneous</xpath>
+				<value>
+					<maxSimultaneous>2</maxSimultaneous>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName = "Dresser"]/comps/li[@Class="CompProperties_Facility"]/maxDistance</xpath>
+				<value>
+					<maxDistance>10</maxDistance>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+</Patch>

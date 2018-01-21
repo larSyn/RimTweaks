@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--==========  RimTweaks - Thoughts  ==========-->
+  
+  <!--==========  Situation Social  ==========-->
+  
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+	    <operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Thoughts_Situation_Social.xml</file>
+            </li>
+		    <li Class="PatchOperationTest">
+		        <xpath>Defs/ThoughtDef[defName = "Ugly"]/nullifyingTraits</xpath>
+		        <success>Invert</success>
+		    </li>
+	    	<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "Ugly"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>Kind</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+  
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+	    <operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Thoughts_Situation_Social.xml</file>
+            </li>
+		    <li Class="PatchOperationTest">
+		        <xpath>Defs/ThoughtDef[defName = "AnnoyingVoice"]/nullifyingTraits</xpath>
+		        <success>Invert</success>
+		    </li>
+	    	<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName = "AnnoyingVoice"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>Kind</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+	    <success>Always</success>
+	    <operations>
+            <li Class="ModCheck.FindFile">
+                <modName>Core</modName>
+                <file>Thoughts_Situation_Social.xml</file>
+            </li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "AnnoyingVoice"]/stages/li/baseOpinionOffset</xpath>
+				<value>
+					<baseOpinionOffset>-15</baseOpinionOffset>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThoughtDef[defName = "SoldPrisoner"]/stages/li/baseOpinionOffset</xpath>
+				<value>
+					<baseOpinionOffset>-5</baseOpinionOffset>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>
