@@ -265,7 +265,7 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/RecipeDef[defName = "MakeComponent"]/ingredients/li/count</xpath>
 					<value>
-						<count>10</count>
+						<count>15</count>
 					</value>
 			</li>
 			<li Class="PatchOperationReplace">

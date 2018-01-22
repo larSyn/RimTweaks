@@ -5,7 +5,7 @@ Crafting:
 	-Crafting Stone Blocks now uses the Crafting skill, Skill Learn Factor increased
 	-Added bulk recipe for Stone Blocks
 	-Components and Advanced Components now stack to 75
-	-Component recipe reduced to 10 Steel, Work Amount reduced to 1000
+	-Component recipe reduced to 15 Steel, Work Amount reduced to 1000
 	-Advanced components Work Amount reduced to 2000
 	-Added bulk recipes for both Component types
 	-Smelting Slag now produces 25 Steel
